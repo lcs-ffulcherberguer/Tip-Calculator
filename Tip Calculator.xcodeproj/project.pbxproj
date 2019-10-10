@@ -22,6 +22,7 @@
 		1CFE3F90234F830600FD8926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CFE3F93234F830600FD8926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CFE3F95234F830600FD8926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CFE3F9B234F8D8000FD8926 /* TipCalculator - Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "TipCalculator - Playground.playground"; path = "../TipCalculator - Playground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		1CFE3F7D234F830400FD8926 = {
 			isa = PBXGroup;
 			children = (
+				1CFE3F9B234F8D8000FD8926 /* TipCalculator - Playground.playground */,
 				1CFE3F88234F830400FD8926 /* Tip Calculator */,
 				1CFE3F87234F830400FD8926 /* Products */,
 			);
