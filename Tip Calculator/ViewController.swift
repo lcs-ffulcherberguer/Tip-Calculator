@@ -6,53 +6,86 @@
 //  Copyright © 2019 Fulcherberguer, Fernanda. All rights reserved.
 //
 
-import UIKit
 
-class ViewController: UIViewController {
+import Foundation
 
-  
-    @IBOutlet weak var totalTip: UITextField!
+class TipCalculator {
+    var amountBeforeTax: Double = 0
+    var tipAmount: Double = 0
+    var tipPercentage: Double = 0
+    var totalAmount: Double = 0
     
-    @IBOutlet weak var tipAmount: UITextField!
-    
-    @IBOutlet weak var amountBill: UITextField!
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func calculateTip(_ sender: Any) {
-        
-        //Double means to be acurrate
-        let amountBill = Double(self.amountBill.text ?? "") ?? 0
-        let tipPercentage = 0.20
-        
-        let tipAmount = (amountBill * tipPercentage)
-        self.amountBill.text = "$\(tipAmount)"
-        
-        let total = (amountBill + tipPercentage)
-        self.totalTip.text = "$\(total)"
-        
-        
-        
-        
-        
-        
-        
+    init(amountBeforeTax: Double, tipPercentage: Double) {
+        self.amountBeforeTax = amountBeforeTax
+        self.tipPercentage = tipPercentage
     }
     
+    func calculateTip()  {
+        tipAmount = amountBeforeTax * tipPercentage
+        totalAmount = tipAmount + amountBeforeTax
+    }
 }
 
 
 
 
+import UIKit
+
+class ViewController: UIViewController {
+
+    
+    @IBOutlet weak var amountBeforeTaxTextField: UITextField!
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var tipPercentageSlider:  UISlider!
+    @IBOutlet weak var numberOfPeopleSlider: UISlider!
+    @IBOutlet weak var numberOfPeopleLabel: UILabel!
+    
+    @IBOutlet weak var eachPersonAmount:  UILabel!
+    @IBOutlet weak var totalResultLabel: UILabel!
+    
+    var tipCalculator = TipCalculator(amountBeforeTax: 0, tipPercentage: 0)
+    
+    func calculateTip() {
+        
+    }
+    
+    func updateUI() {
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        amountBeforeTaxTextField.becomeFirstResponder()
+    }
+    
+    func calculateTip() {
+        
+    }
+    
+    func updateUI() {
+        
+    }
+    
+    //Mark: - Target / Action
+    
+    @IBAction func tipSliderValueChanged(sender: Any) {
+        
+    }
+    
+    @IBAction func numberOfPeopleSliderValueChanged(sender: Any) {
+        
+    }
+
+    @IBAction func amountBeforeTaxTextfieldChanged(sender: Any) {
+
+    }
+
+    @IBAction func amountBeforeTaxTextfieldChanged(sender: Any) {
+    
+}
 
 
 
-
-
-
-
+}
+ 

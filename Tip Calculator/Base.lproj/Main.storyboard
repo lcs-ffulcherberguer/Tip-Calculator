@@ -50,6 +50,9 @@
                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="amountBeforeTaxTextfieldChangedWithSender:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="pqT-Cx-1hs"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -75,6 +78,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="10" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="hP9-pP-DQP">
                                         <rect key="frame" x="6" y="14" width="239" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="tipSliderValueChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="hDA-7W-pl3"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.36859238147735596" green="0.36864987015724182" blue="0.36857983469963074" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -100,6 +106,9 @@
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="KZv-Hb-884">
                                         <rect key="frame" x="6" y="14" width="239" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="numberOfPeopleSliderValueChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="RPd-h9-vmo"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.36859238150000001" green="0.36864987020000001" blue="0.3685798347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,6 +159,15 @@
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="amountBeforeTaxTextField" destination="ZRW-Bw-ZWC" id="1Ix-BG-9m3"/>
+                        <outlet property="eachPersonAmount" destination="R2o-Et-HnE" id="Bom-GM-QRW"/>
+                        <outlet property="numberOfPeopleLabel" destination="rFn-xj-5Fe" id="PXS-MZ-e7h"/>
+                        <outlet property="numberOfPeopleSlider" destination="KZv-Hb-884" id="e3M-Co-oeU"/>
+                        <outlet property="tipPercentageLabel" destination="N0p-7v-lWq" id="UJv-tZ-p47"/>
+                        <outlet property="tipPercentageSlider" destination="hP9-pP-DQP" id="D8L-Bg-ZhN"/>
+                        <outlet property="totalResultLabel" destination="vh5-Ut-goZ" id="CRl-L7-hFu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
