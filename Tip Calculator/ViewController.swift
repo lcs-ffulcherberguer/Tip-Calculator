@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-     
+  
+    @IBOutlet weak var totalTip: UITextField!
     
+    @IBOutlet weak var tipAmount: UITextField!
     
-    
+    @IBOutlet weak var amountBill: UITextField!
     
     
     
@@ -22,6 +24,35 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func calculateTip(_ sender: Any) {
+        
+        //Double means to be acurrate
+        let amountBill = Double(self.amountBill.text ?? "") ?? 0
+        let tipPercentage = 0.20
+        
+        let tipAmount = (amountBill * tipPercentage)
+        self.amountBill.text = "$\(tipAmount)"
+        
+        let total = (amountBill + tipPercentage)
+        self.totalTip.text = "$\(total)"
+        
+        
+        
+        
+        
+        
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
 
