@@ -86,8 +86,30 @@ class ViewController: UIViewController {
         
     }
         
-    
+    //Try to convert the string into a double data type display error message if cannot be converted
+        guard let amountOfBillDouble = Double(amountOfBillString) else {
+        errorLabel.text = "Error. Please enter a number."
+                return
+        }
         
-    
+        guard let amountOfPeopleDouble = Double(amountOfPeopleString) else {
+            //   errorLabel.text = "Error. Please enter a number."
+            return
+        }
+        
+       // Calculate tip amount, round it, and change it into a string
+        let tipAmount = amountOfBillDouble * tipPercent
+        let roundedTipAmount = (round(100*tipAmount)/100)
+        let tipAmountSring = String(roundedTipAmount)
+        
+        // Share information to the user interface
+        
+        
+        
+        
+        
+        
+        
+        
 }
 }
